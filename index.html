@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+    <div class="background">
+        <div class="center"></div>
+    </div>
     <!--Scroll to top button-->
     <div class="scroll-btn">
         <a href="#home"><i class="fas fa-arrow-up"></i></a>
@@ -308,5 +311,17 @@ I also believe that I am capable of switching to other programming languages dep
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script>
+        const center = document.querySelector('.center');
+        const n = 300; // tu peux réduire à 180 si trop lourd
+
+        for (let i = 1; i <= n; i++) {
+            const div = document.createElement('div');
+            div.className = 'thing';
+            div.style.setProperty('--i', i);
+            center.appendChild(div);
+        }
+    </script>
+
 </body>
 </html>
